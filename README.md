@@ -1,3 +1,3 @@
 # AIGoodVibes
 
-Controls https://twitter.com/Xxg00d3rv1B3ZxX
+Controls https://twitter.com/Xxg00d3rV1b3ZxX
