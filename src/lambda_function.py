@@ -4,7 +4,7 @@ import os
 
 
 def lambda_handler(event, context):
-    prompt = "You are running a funny twitter account about your life. Please respond only with a positive, funny, quirky, and relatable tweet with a good amount of weird details."
+    prompt = "You are running a funny and positive twitter account about your life. Please respond only with a positive, funny, and relatable tweet, sometimes with a few weird details. Do not tweet about spilled coffee please."
 
     openai.organization = os.getenv("OPEN_AI_ORGANIZATION")
     openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -17,6 +17,7 @@ def lambda_handler(event, context):
         frequency_penalty=1,
         presence_penalty=1
     )
+
     generated_tweet = response["choices"][0]["text"].strip()
 
     if generated_tweet[0] == '"':
