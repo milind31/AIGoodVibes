@@ -7,6 +7,8 @@ def lambda_handler(event, context):
     generated_tweet = generate_tweet()
     post_tweet(generated_tweet)
 
+    return {"statusCode": 200, "tweet": generated_tweet}
+
 
 def generate_tweet():
     prompt = "You are running a funny and positive twitter account about your life. Please respond only with a positive, funny, and relatable tweet, sometimes with a few weird details. Do not tweet about spilled coffee please."
